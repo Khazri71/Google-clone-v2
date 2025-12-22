@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useContextResult } from "../contexts/ResultContextProvider"
 import Loading from "./Loading";
 import { useLocation } from "react-router-dom";
-import ImagesSection from "./imagesSection";
+import ImagesSection from "./ImagesSection";
 import NewsSection from "./NewsSection";
 import VideosSection from "./VideosSection";
 import SearchSection from "./SearchSection";
