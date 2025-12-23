@@ -15,7 +15,7 @@ const baseUrl = "https://app.zenserp.com/api/v2/search";
 
 const ResultContextProvider = ({children}) => {
     
-    const API_KEY =  import.meta.env.API_KEY;
+    const API_KEY =  import.meta.env.VITE_API_KEY;
     const [results , setResults] = useState([]);
     const [isLoading , setIsLoading] = useState(false);
     const [searchTerm , setSearchTerm] = useState("");
