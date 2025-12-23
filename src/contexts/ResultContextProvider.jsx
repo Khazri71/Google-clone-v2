@@ -1,6 +1,6 @@
 
 import { createContext , useContext, useState } from "react"
-import dotenv from 'dotenv';
+
 
 
 const ResultContext = createContext();
