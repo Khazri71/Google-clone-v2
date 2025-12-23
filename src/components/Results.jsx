@@ -15,16 +15,16 @@ const Results = () => {
 
   useEffect( () => {
     if(searchTerm){
-      //  if (location.pathname === "/search")
-      //     getResults(`?apikey=${API_KEY}&q=${searchTerm}`);
-      //   else if (location.pathname === "/images")
-      //       getResults(`?apikey=${API_KEY}&q=${searchTerm}&tbm=isch`);
-      //    if (location.pathname === "/news") 
-      //      getResults(`?apikey=${API_KEY}&q=${searchTerm}&tbm=nws`);
-      //   if (location.pathname === "/videos")
-      //       getResults(`?apikey=${API_KEY}&q=${searchTerm}&tbm=vid`);
-      //   else 
-      //     console.log("Error");
+       if (location.pathname === "/search")
+          getResults(`?apikey=${API_KEY}&q=${searchTerm}`);
+        else if (location.pathname === "/images")
+            getResults(`?apikey=${API_KEY}&q=${searchTerm}&tbm=isch`);
+         if (location.pathname === "/news") 
+           getResults(`?apikey=${API_KEY}&q=${searchTerm}&tbm=nws`);
+        if (location.pathname === "/videos")
+            getResults(`?apikey=${API_KEY}&q=${searchTerm}&tbm=vid`);
+        else 
+          console.log("Error");
     }
 
    
