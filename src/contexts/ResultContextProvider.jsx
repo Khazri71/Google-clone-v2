@@ -23,10 +23,13 @@ const ResultContextProvider = ({children}) => {
 
     const getResults = async (type) => {
         setIsLoading(true)
-       const response = await fetch(`${baseUrl}${type}` , {
-        method: 'GET',
+       // const response = await fetch(`${baseUrl}${type}` , {
+       //  method: 'GET',
      
-       });
+       // });
+         const response = await fetch(
+      `${baseUrl}?q=${searchTerm}&engine=${searchEngine}&apikey=${API_KEY}`
+    );
        try{
         const data = await response.json();
         console.log(data);
