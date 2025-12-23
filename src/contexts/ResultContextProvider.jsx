@@ -23,10 +23,17 @@ const ResultContextProvider = ({children}) => {
 
     const getResults = async (type) => {
         setIsLoading(true)
-       const response = await fetch(`${baseUrl}${type}` , {
-        method: 'GET',
+       // const response = await fetch(`${baseUrl}${type}` , {
+       //  method: 'GET',
      
-       });
+       // });
+        const res = await axios.get("https://app.zenserp.com/api/v2/search", {
+  params: {
+    q: searchTerm,
+    engine: "google",
+    apikey: import.meta.env.VITE_API_KEY,
+  },
+});
        
        try{
         const data = await response.json();
